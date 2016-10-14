@@ -18,7 +18,9 @@ import { Task } from './task.model';
 })
 
 export class NewTaskComponent {
+  @Output() newTaskSender = new EventEmitter();
   addClicked(description: string, id: number) {
     var newTaskToAdd: Task = new Task(description, id);
+    this.newTaskSender.emit(newTaskToAdd);
   }
 }
