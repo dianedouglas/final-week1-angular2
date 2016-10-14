@@ -15,6 +15,7 @@ import { Task } from './task.model';
       [childSelectedTask]="selectedTask"
       (doneClickedSender)="finishedEditing()"
     ></edit-task>
+    <new-task></new-task>
   </div>
   `
 })
