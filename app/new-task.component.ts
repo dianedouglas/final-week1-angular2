@@ -12,11 +12,13 @@ import { Task } from './task.model';
     <div>
       <label>Enter Task ID:</label>
       <input #newId>
-      <button>Add</button>
+      <button (click)="addClicked(newDescription.value, newId.value)">Add</button>
     </div>
   `
 })
 
 export class NewTaskComponent {
-
+  addClicked(description: string, id: number) {
+    var newTaskToAdd: Task = new Task(description, id);
+  }
 }
