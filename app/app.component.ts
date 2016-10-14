@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
   template: `
   <div class="container">
     <h1>My First Angular 2 App</h1>
-    <h3 (click)="showDetails(currentTask)" *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
+    <div *ngFor="let currentTask of tasks">
+      <h3>{{ currentTask.description }}</h3>
+      <button (click)="showDetails(currentTask)">Edit</button>
+    </div>
     <h1>Edit Task</h1>
     <div>
       <label>Enter Task Description: </label>
