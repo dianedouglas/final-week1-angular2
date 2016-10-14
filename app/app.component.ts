@@ -9,6 +9,7 @@ import { Task } from './task.model';
     <pies></pies>
     <task-list
         [childTaskList]="masterTaskList"
+        (clickSender)="showDetails($event)"
       ></task-list>
     <div *ngIf="selectedTask">
       <h1>Edit Task</h1>
