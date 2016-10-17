@@ -10,7 +10,7 @@ import { Task } from './task.model';
       <option value="isDone">Show Done</option>
       <option value="notDone" selected="selected">Show Not Done</option>
     </select>
-    <div *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness">
+    <div *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness:'I':'Want':5:'Slices':'Of':'Cheesecake'">
       <h3>{{ currentTask.description }}</h3>
       <button (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
     </div>
