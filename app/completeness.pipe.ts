@@ -6,8 +6,7 @@ import {Task} from './task.model';
   pure: false
 })
 export class CompletenessPipe implements PipeTransform {
-  transform(input: Task[], info) {
-    var desiredCompleteness = info[0];
+  transform(input: Task[], desiredCompleteness) {
     var output: Task[] = [];
     if(desiredCompleteness === "notDone") {
       for (var i = 0; i < input.length; i++) {
