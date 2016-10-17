@@ -9,7 +9,7 @@ export class CompletenessPipe implements PipeTransform {
   transform(input: Task[]){
     var output: Task[] = [];
     for (var i = 0; i < input.length; i++) {
-      if (input[i].done === false) {
+      if (input[i].done === true) {
         output.push(input[i]);
       }
     }
