@@ -5,7 +5,7 @@ import { Task } from './task.model';
 @Component({
   selector: 'task-list',
   template: `
-    <select>
+    <select (change)="onChange($event.target.value)">
       <option value="all">Show All</option>
       <option value="isDone">Show Done</option>
       <option value="notDone" selected="selected">Show Not Done</option>
